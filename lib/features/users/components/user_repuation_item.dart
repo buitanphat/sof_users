@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sof_users/utils/time_formatter.dart';
 
 class UserReputationItem extends StatelessWidget {
   final String? reputationType;
@@ -61,7 +62,7 @@ class UserReputationItem extends StatelessWidget {
         children: [
           _typeDecorator(),
           Text('Change: $change'),
-          Text('Created At: $createAt'),
+          Text('Created At: ${TimeUtils.convert12Hour(createAt!)}'),
           Text('Post ID: $postId'),
         ],
       ),

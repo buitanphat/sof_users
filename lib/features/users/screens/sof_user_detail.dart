@@ -34,8 +34,6 @@ class _SOFUsersDetailScreenState extends State<SOFUserDetailScreen> {
     super.initState();
     sofUserReputationProvider =
         Provider.of<SOFUserReputationProvider>(context, listen: false);
-    // sofUserReputationProvider.fetchReputationListByUserID(userId, page);
-    // page++;
   }
 
   @override

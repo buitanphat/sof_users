@@ -21,7 +21,6 @@ class _SOFUsersScreenState extends State<SOFUsersScreen> {
     _scrollController = ScrollController()..addListener(_scrollListener);
     super.initState();
     sofUserProvider = Provider.of<SOFUsersProvider>(context, listen: false);
-    sofUserProvider = Provider.of<SOFUsersProvider>(context, listen: false);
     sofUserProvider.loadLocalBookmark();
     sofUserProvider.fetchUsersList(page);
     page++;
@@ -96,10 +95,6 @@ class _SOFUsersScreenState extends State<SOFUsersScreen> {
                 bookmarkAdded:
                     bookmarkAddedMap.containsKey(userModel.userId.toString()),
                 onTap: () {
-                  // Navigator.of(context).pushNamed('/userDetail',
-                  //     arguments: {
-                  //       userId
-                  //     });
                   Navigator.pushNamed(context, '/userDetail',
                       arguments: ScreenArguments(
                         userId: userModel.userId,
